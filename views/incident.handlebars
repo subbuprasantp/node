@@ -1,0 +1,115 @@
+<div class="col-lg-6 left-column">
+
+    <!-- Navbar -->
+    {{> menu}}
+
+    <!-- Form -->
+    {{#unless completed}}
+        <div class="tittle-container text-center">
+            <h2 class="tittle">Resolve Incident</h2>
+        </div>
+
+        <form class="contact-form" method="POST" action="/incident/{{{data.id}}}">
+            <div class="form-group row">
+                <label for="message" class="col-lg-4 col-form-label">Message</label>
+                <div class="col-lg-8">
+                    <textarea class="form-control form-control-sm" id="message" name="message" rows="5"
+                              required></textarea>
+                </div>
+
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-right">
+                <input class="btn btn-submit" type="submit" value="Submit">
+            </div>
+
+        </form>
+    {{/unless}}
+    {{#if completed}}
+        <div class="tittle-container text-center">
+            <h2 class="tittle">Incident details</h2>
+        </div>
+
+        <div class="form-group row">
+            <label for="name" class="col-lg-4 col-form-label">Your Name</label>
+            <div class="col-lg-8">
+                <input id="name" type="text" name="name" class="form-control form-control-sm" readonly value="{{data.name}}">
+            </div>
+        </div>
+
+        <!-- Organization -->
+        <div class="form-group row">
+            <label for="organization" class="col-lg-4 col-form-label">Organization</label>
+            <div class="col-lg-8">
+                <input type="text" id="organization" name="organization" class="form-control form-control-sm" readonly value="{{data.organization}}">
+            </div>
+        </div>
+
+        <!-- Application -->
+        <div class="form-group row">
+            <label for="application" class="col-lg-4 col-form-label">Application</label>
+            <div class="col-lg-8">
+                <input type="text" id="application" name="application" class="form-control form-control-sm" readonly value="{{data.application}}">
+            </div>
+        </div>
+
+
+
+        <!-- URL -->
+        <div class="form-group row">
+            <label for="url" class="col-lg-4 col-form-label">URL called</label>
+            <div class="col-lg-8">
+                <input type="text" id="url" name="url" class="form-control form-control-sm" readonly value="{{data.url}}">
+            </div>
+        </div>
+
+        <!-- API -->
+        <div class="form-group row">
+            <label for="api" class="col-lg-4 col-form-label">API parameters</label>
+            <div class="col-lg-8">
+                <input type="text" id="api" name="api" class="form-control form-control-sm" readonly value="{{data.api}}">
+            </div>
+        </div>
+
+        <!-- Error code -->
+        <div class="form-group row">
+            <label for="errorCode" class="col-lg-4 col-form-label">Error code</label>
+            <div class="col-lg-8">
+                <input type="text" id="errorCode" name="errorCode" class="form-control form-control-sm" readonly value="{{data.errorCode}}">
+            </div>
+        </div>
+
+        <!-- Email -->
+        <div class="form-group row">
+            <label for="email" class="col-lg-4 col-form-label">Email Address</label>
+            <div class="col-lg-8">
+                <input type="email" id="email" name="email" class="form-control form-control-sm" readonly value="{{data.email}}">
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group row">
+            <label for="message" class="col-lg-4 col-form-label">Message</label>
+            <div class="col-lg-8">
+                <textarea class="form-control form-control-sm" id="message" name="message" rows="5"  readonly>{{data.message}}</textarea>
+            </div>
+        </div>
+
+        <!-- Status -->
+        <div class="form-group row">
+            <label for="status" class="col-lg-4 col-form-label">Status</label>
+            <div class="col-lg-8">
+                <input type="text" id="status" name="status" class="form-control form-control-sm" readonly value="{{data.status}}">
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group row">
+            <label for="resolutionMessage" class="col-lg-4 col-form-label">Resolution Message</label>
+            <div class="col-lg-8">
+                <textarea class="form-control form-control-sm" id="resolutionMessage" name="resolutionMessage" rows="5"  readonly>{{data.resolutionMessage}}</textarea>
+            </div>
+        </div>
+    {{/if}}
+</div>

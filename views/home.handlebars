@@ -1,0 +1,122 @@
+<!-- Left Column -->
+<div class="col-lg-6 left-column">
+
+    <!-- Navbar -->
+    {{> menu}}
+
+    <!-- Contact Form Title -->
+    <div class="tittle-container text-center">
+        <h2 class="tittle">Submit Request </h2>
+        <h4 class="subtitle">Optum Support</h4>
+    </div>
+
+    <!-- Form -->
+    <form class="contact-form" method="POST" action="send">
+        {{{msg}}}
+
+        <!-- Name -->
+        <div class="form-group row">
+            <label for="name" class="col-lg-4 col-form-label">Your Name</label>
+            <div class="col-lg-8">
+                <input id="name" type="text" name="name" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <!-- Organization -->
+        <div class="form-group row">
+            <label for="organization" class="col-lg-4 col-form-label">Organization</label>
+            <div class="col-lg-8">
+                <input type="text" id="organization" name="organization" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <!-- Application -->
+        <div class="form-group row">
+            <label for="application" class="col-lg-4 col-form-label">Application</label>
+            <div class="col-lg-8">
+                <input type="text" id="application" name="application" class="form-control form-control-sm">
+            </div>
+        </div>
+
+
+
+        <!-- URL -->
+        <div class="form-group row">
+            <label for="url" class="col-lg-4 col-form-label">URL called</label>
+            <div class="col-lg-8">
+                <input type="text" id="url" name="url" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <!-- API -->
+        <div class="form-group row">
+            <label for="api" class="col-lg-4 col-form-label">API parameters</label>
+            <div class="col-lg-8">
+                <input type="text" id="api" name="api" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <!-- Error code -->
+        <div class="form-group row">
+            <label for="errorCode" class="col-lg-4 col-form-label">Error code</label>
+            <div class="col-lg-8">
+                <input type="text" id="errorCode" name="errorCode" class="form-control form-control-sm">
+            </div>
+        </div>
+
+
+
+        <!-- Email -->
+        <div class="form-group row">
+            <label for="email" class="col-lg-4 col-form-label">Email Address</label>
+            <div class="col-lg-8">
+                <input type="email" id="email" name="email" class="form-control form-control-sm">
+            </div>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group row">
+            <label for="message" class="col-lg-4 col-form-label">Message</label>
+            <div class="col-lg-8">
+                <textarea class="form-control form-control-sm" id="message" name="message" rows="5" required></textarea>
+            </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-right">
+            <input class="btn btn-submit" type="submit" value="Submit">
+        </div>
+
+    </form>
+</div>
+<!-- End Left Coloumn -->
+
+<!-- Right Column -->
+<div class="col-lg-4 right-column">
+
+    <!-- Company Info -->
+    <div class="contact-info">
+        <h3>Form Instructions </h3>
+
+
+
+        Provide Baseline Technical Details
+        When in doubt, a helpdesk ticket should include the following technical details:
+
+        The device being used (iPhone, PC, etc.)
+        Operating system and version (Android Nougat, MacOS 10.12, etc.)
+        Browser type and version (Chrome 55.0.2883.9, etc.)
+        URL where the error occurred
+        Providing this level of detail will go a long way with your helpdesk. Every ticket may not need this information, but it is a great starting point.
+
+        Include the Time of First Occurrence and the Persistence of Issue
+        Always provide the time when your issue first occurred. A good IT organization has tons of logs, so the more exact time you can provide, the easier it will be for them to find the issue in their logs.
+
+        Also, including the time when the error occurred helps IT see if any similar issues occurred within the same timeframe. Many modern technology hiccups don’t happen in isolation, meaning the helpdesk can link events together and take appropriate action, such as sending a company-wide email announcement.
+    </div>
+
+    <!-- Social Icons -->
+
+</div>
+<!-- Right Column -->
